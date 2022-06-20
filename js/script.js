@@ -35,8 +35,8 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
-        const lastFilm = prompt('Один из последних просмотренных фильмов?', '');
-        const pointFilm = +prompt('На сколько оцените его?');
+        const lastFilm = prompt('Один из последних просмотренных фильмов?', '').trim();
+        const pointFilm = +prompt('На сколько оцените его?').trim();
         if (lastFilm !== null && pointFilm !== null && lastFilm !== '' && pointFilm !== '' && lastFilm.length < 50) {
             personalMovieDB.movies[lastFilm] = pointFilm;
         } else {
@@ -75,4 +75,4 @@ function writeYourGenres() {
     }
 }
 
-writeYourGenres(); 
+writeYourGenres();
